@@ -55,4 +55,4 @@ bubbleSort([1, 5, 3, 9, 22, 3, 2])
 // Time complexity is N^2 because of a nested loop and making multiple comparisons.
 // But if data is nearly sorted, it is O(n).
 
-// Bubble sort could be used primarily if data is nearly sorted. It may not be the best solution, but it sets up for more complex algorithms.
+// Bubble sort could be used primarily if data is nearly sorted. It may not be the best solution, but it sets up for more complex algorithms.`

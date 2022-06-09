@@ -32,6 +32,7 @@ function merge(arr1, arr2) {
   // (in case we didn't go through the entire left or right array)
   return [...results, ...arr1, ...arr2]
 }
+
 // merge([1, 10, 50], [2, 3, 5, 99, 100])
 
 // Now the mergeSort pseudocode itself.
@@ -67,3 +68,5 @@ mergeSort([10, 24, 76, 73, 72, 1, 9])
 // the n before logN, is comparisions per decomposition. (meaning comparing indexes of each array)
 // making this better then a quadratic time, and similar to a linear time.
 // space complexity: O(n)
+// Why?
+// As we have a larger array, we have to store more arrays, depending on the size of original array.

@@ -28,3 +28,5 @@ function binarySearch(arr, val) {
 }
 binarySearch([1, 2, 3, 4, 5, 6, 7], 5)
 console.log(Math.floor((0 + 9) / 2))
+// time complexity: o(log n)
+// space: o(1)

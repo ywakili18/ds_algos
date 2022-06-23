@@ -57,19 +57,23 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
   // left and right is based on where the pivot index is at that point.
   // so as soon as it is equal, we are looking at one element, then recurisve call ends.
   // of one of the subarrays.
-  if (left < right) {
+
+  if (arr.length <= 1) {
+    return arr
+  }
+  while (left <= right) {
     // returns pivot index
     let pivotIndex = pivot(arr, left, right)
     // recursively get the pivot point from the left sub array, until the pivotpoint index
     quickSort(arr, left, pivotIndex - 1)
     // recursively get the right subarray starting from the pivet point onwards
     quickSort(arr, pivotIndex + 1, right)
+    return arr
   }
   // return the sorted array.
-  console.log(arr)
-  return arr
 }
-quickSort([4, 2, 1, 7, 6])
+quickSort([4])
+
 // time compleixty:
 // best case is o(n log n)
 // avg is o(n log n)

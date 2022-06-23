@@ -1,3 +1,5 @@
+// Creating a stack with an array implementation
+
 // Pushing Psuedocode
 // The function should accept a value
 // Create a new node with that value
@@ -6,7 +8,6 @@
 // Reset the first property to be the newly created node.
 // Set the next property on the node to be the previously created variable.
 // Increment the size of the stack by 1
-// REMEMBER: LAST IN, FIRST OUT.
 
 class Node {
   constructor(val) {
@@ -30,8 +31,15 @@ class Stack {
       this.first = newNode
       this.first.next = temp
     }
-    return this.size++
+    // should return the size of the stack everytime.
+    return ++this.size
   }
+  // If there are no nodes in the stack, return null
+  // Create a temp val to store first property on the stack
+  // If there is only one node, set the first and last property to be null
+  // Else set first property to be the next property on the current first
+  // Decrement the size by 1
+  // Return the value of the node removed
   pop() {
     if (!this.first) {
       return null
@@ -44,10 +52,13 @@ class Stack {
       this.first = this.first.next
     }
     this.size--
-    return temp
+    return temp.val
   }
 }
+
 let first = new Stack()
-first.push('1')
-first.push('1')
+first.push(1)
+first.push(2)
+first.push(3)
+first.pop()
 console.log(first)
